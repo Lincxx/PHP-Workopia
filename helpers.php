@@ -18,6 +18,28 @@ function basePath($path=''){
  */
 
  function loadView($name){
-    require basePath("views/{$name}.view.php");
+   $viewPath = basePath("views/{$name}.view.php");
+   if(file_exists($viewPath)) {
+    require $viewPath;
+   } else {
+    echo "View '{$name}' not found!";
+   }
  }
 
+
+ 
+/**
+ * Load a partial
+ * 
+ * @param string $name
+ * @return void
+ */
+
+ function loadPartial($name){
+    $partialView =  basePath("views/partials/{$name}.php");
+   if(file_exists($partialView)) {
+    require $partialView;
+   } else {
+    echo "View '{$name}' not found!";
+   }
+ }
