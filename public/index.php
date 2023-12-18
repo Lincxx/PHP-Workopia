@@ -1,6 +1,11 @@
 <?php 
+   //require the autoloader
+   require __DIR__ . '/../vendor/autoload.php';
+
    require '../helpers.php';
   
+   use Framework\Router;
+   
    //this is odd - it just works. 
    // spl_autoload_register(function ($class){
    //    $path = basePath('Framework/' . $class . '.php');
