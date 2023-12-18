@@ -1,0 +1,16 @@
+{
+  "name": "lincxx/php-workopia",
+  "description": "Job listing application",
+  "authors": [
+    {
+      "name": "Jeremy Lincoln",
+      "email": "support@email.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Framework\\": "Framework/",
+      "App\\": "App/"
+    }
+  }
+}
